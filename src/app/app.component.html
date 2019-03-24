@@ -1,24 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-quotes-navbar></app-quotes-navbar>
+
 <div style="text-align:center">
-  <h1>Quotes</h1>
   
- 
-<!-- <app-quotes-form></app-quotes-form>
+
+
+  <!-- <app-quotes-form></app-quotes-form>
   <app-quotes-details></app-quotes-details>
   <app-quotes></app-quotes> -->
-
+  
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-4">
-      <app-quotes-form></app-quotes-form>
+        <app-quotes-form></app-quotes-form>
       </div>
       <div class="col-md-7">
         
-        <app-quotes [value]="quote"></app-quotes>
-        <app-quotes-details></app-quotes-details>
+
+        <app-quotes></app-quotes>
+<ul>
+  <li *ngFor='let quote of quotes'>{{quote.author}} at {{quote.name}} and {{quote.details}}</li>
+</ul>
+
+      
+ <p *ngIf='quotes.length > 2'>You have too many quotes</p>
       </div>
     </div>
   </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

@@ -41,14 +41,16 @@
 
       <!--Body-->
       <div class="md-form">
-        <label for="Form-email5">Your name</label><br><br>
-        <input type="text" id="Form-email5" class="form-control white-text">
+        <label for="name">Your name</label><br><br>
+        <input type="text" id="name" class="form-control white-text" [(ngModel)]="quote.name" placeholder="name">
+        <!-- add two way data binding syntax -->
+       
         
       </div>
 
          <div class="md-form">
-              <label for="Form-email5">Author</label><br><br>
-           <input type="text" id="Form-email5" class="form-control white-text"><br>
+           <label for="name">Author</label><br><br>
+              <input type="text" id="name" class="form-control white-text" [(ngModel)]="quote.name" placeholder="name">
         
          </div>
 
@@ -56,13 +58,24 @@
         
         <label for="quoteadded">Add a Quote</label><br><br>
         
-        <input type="text" class="form-control white-text">
+      
+                <textarea class="form-control" id="details" rows="4"
+                  [(ngModel)]="newQuote.details" name="description" #description="ngModel" required class="form-control
+                  white-text"></textarea>
        
        
 
         <div class="md-form mx-5 my-5">
-          <input type="datetime-local" id=" inputMDEx" class="form-control">
-          <label for="inputMDEx">Date added:</label>
+           <label for="addition">Date added:</label><br><br>
+          <input type='date' id="addition" [(ngModel)]="quote.dateAdd" name="dateAdd" #completeDate="ngModel" required
+            class="form-control" class="form-control white-text">
+         <div class="form-group">
+         
+          
+
+           
+           
+          </div>
         </div>
       </div>
 
@@ -71,7 +84,7 @@
 
         <!--Grid column-->
         <div class="text-center mb-3 col-md-12">
-          <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Add Quote</button>
+          <button type="submit" class="btn btn-success btn-block btn-rounded z-depth-1">Add Quote</button>
         </div>
         <!--Grid column-->
       </div>

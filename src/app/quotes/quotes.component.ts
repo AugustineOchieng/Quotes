@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-quotes',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./quotes.component.scss']
 })
 export class QuotesComponent implements OnInit {
-  @Input() value: any;
+  
   constructor() { }
 
   ngOnInit() {

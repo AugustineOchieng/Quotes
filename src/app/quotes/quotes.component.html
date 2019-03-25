@@ -5,27 +5,45 @@
   <ul>
     <li *ngFor="let quote of quotes; let i = index">
       {{ i }} {{ quote.name }}
+      
     </li>                             
   </ul>
    
-<div class="media">
+<!-- <div class="media">
   <div class="row">
   <div class="col-xsm-4">
-  <h3 class="h3-responsive font-weight-bold mr-3">By :{{quote.name}}</h3>
+  <h3 class="h3-responsive font-weight-bold mr-3">By :
+    <ul>
+      <li *ngFor='let quote of quotes'>{{quote.author}}</li>
+    </ul>
+
+  </h3>
   </div>
   <div class="media-body mb-3">
      <div class="col-sm-8">
-    <h6 class="mt-0 font-weight-bold">Uploaded by :{{quote.author}}</h6>
+    <h6 class="mt-0 font-weight-bold">Uploaded by :
+      <ul>
+        <li *ngFor='let quote of quotes'>{{quote.name}}
+        </li>
+      </ul>
+
+    </h6>
 
     <hr class="hr-bold mb-0 my-2" />
      </div>
   </div>
-   <p class="p-3 blue-grey lighten-5 blue-grey lighten-5" class="mb-0">
-  {{quote.description}}
-    </p>
+   
+  <ul class="p-3 blue-grey lighten-5 blue-grey lighten-5" class="mb-0">
+    <li *ngFor='let quote of quotes'> {{quote.wise}}</li>
+  </ul>
+
+  
   </div>
 </div>
-<p class="p-3 blue-grey lighten-5 blue-grey lighten-5">
-  {{ quote.description}}
-</p>
 
+  <ul class="p-3 blue-grey lighten-5 blue-grey lighten-5">
+    <li *ngFor='let quote of quotes'>{{quote.details}}</li>
+  </ul>
+
+
+ -->

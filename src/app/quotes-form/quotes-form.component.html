@@ -26,6 +26,7 @@
         <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
      </form> -->
 <!--Section: Live preview-->
+<form (ngSubmit)='submitQuote()' #quoteForm="ngForm"></form>
 <section class="form-dark">
 
   <!--Form without header-->
@@ -42,7 +43,7 @@
       <!--Body-->
       <div class="md-form">
         <label for="name">Your name</label><br><br>
-        <input type="text" id="name" class="form-control white-text" [(ngModel)]="quote.name" placeholder="name">
+        <input type="text" id="name" class="form-control white-text" [(ngModel)]="newQuote.name" placeholder="name">
         <!-- add two way data binding syntax -->
        
         
@@ -50,7 +51,7 @@
 
          <div class="md-form">
            <label for="name">Author</label><br><br>
-              <input type="text" id="name" class="form-control white-text" [(ngModel)]="quote.name" placeholder="name">
+              <input type="text" id="name" class="form-control white-text" [(ngModel)]="newQuote.author" name="name" placeholder="name">
         
          </div>
 
@@ -59,11 +60,10 @@
         <label for="quoteadded">Add a Quote</label><br><br>
         
       
-                <textarea class="form-control" id="details" rows="4"
-                  [(ngModel)]="newQuote.details" name="description" #description="ngModel" required class="form-control
+                <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.text" name="description"
+                  #description="ngModel" required class="form-control
                   white-text"></textarea>
-       
-       
+        
 
         <div class="md-form mx-5 my-5">
            <label for="addition">Date added:</label><br><br>
@@ -98,3 +98,4 @@
 
 </section>
 <!--Section: Live preview-->
+

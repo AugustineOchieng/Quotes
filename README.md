@@ -47,7 +47,7 @@ Everyone interested is most welcome to fork this code and modify it for updates.
 | Press toggle details button| Read clicked event| Show details|
 
 ## Deployed Link
-To check out and try out the test click upon this link https://github.com/AugustineOchieng/Js-Quiz.git
+To check out and try out the application click upon this link https://augustineochieng.github.io/Quotes/
 
 
 ## Code scaffolding

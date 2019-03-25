@@ -1,10 +1,10 @@
 <p>{{quote.details}}</p>
-Added on {{quote.completeDate|date|uppercase}}
+Added on {{quote.completeDate|date}} 
 <div class="row">
   <div class="col-md-4">
     <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete <br> Quote</button> </div>
   <div class="col-md-4">
-    <button class="btn btn-success" (click)='thumbsUp()'>Upvote<br>{{upvotes}}</button>
+    <button id="up" class="btn btn-success" (click)='thumbsUp()'>Upvote<br>{{upvotes}}</button>
   </div>
   <div class="col-md-4">
     <button class="btn btn-warning" (click)='thumbsDown()'>DownVote<br>{{downvote}}</button>

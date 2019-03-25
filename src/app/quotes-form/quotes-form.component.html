@@ -26,7 +26,7 @@
         <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
      </form> -->
 <!--Section: Live preview-->
-<form (ngSubmit)='submitQuote()' #quoteForm="ngForm"></form>
+<form>
 <section class="form-dark">
 
   <!--Form without header-->
@@ -43,7 +43,7 @@
       <!--Body-->
       <div class="md-form">
         <label for="name">Your name</label><br><br>
-        <input type="text" id="name" class="form-control white-text" [(ngModel)]="newQuote.name" placeholder="name">
+        <input type="text" id="name" class="form-control white-text"placeholder="name">
         <!-- add two way data binding syntax -->
        
         
@@ -51,7 +51,7 @@
 
          <div class="md-form">
            <label for="name">Author</label><br><br>
-              <input type="text" id="name" class="form-control white-text" [(ngModel)]="newQuote.author" name="name" placeholder="name">
+              <input type="text" id="name" class="form-control white-text" name="name" placeholder="name">
         
          </div>
 
@@ -60,14 +60,13 @@
         <label for="quoteadded">Add a Quote</label><br><br>
         
       
-                <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.text" name="description"
-                  #description="ngModel" required class="form-control
+                <textarea class="form-control" id="description" rows="4"  class="form-control
                   white-text"></textarea>
         
 
         <div class="md-form mx-5 my-5">
            <label for="addition">Date added:</label><br><br>
-          <input type='date' id="addition" [(ngModel)]="quotes.dateAdd" name="dateAdd" #completeDate="ngModel" required
+          <input type='date' id="addition"  required
             class="form-control" class="form-control white-text">
          <div class="form-group">
          

@@ -5,6 +5,7 @@ export class Quotes {
     public name: string,
     public author: string,
     public wise:string,
-    public details: string
+    public details: string,
+    public completeDate: Date
   ) {this.showDetails=false}
 }

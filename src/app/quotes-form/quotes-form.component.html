@@ -76,9 +76,10 @@
                   white-text" name="details" placeholder="put details" [(ngModel)]="newQuotes.details"
   #details="ngModel"></textarea>
 
-        <!-- <div class="md-form mx-5 my-5">
-           <label for="addition">Date added:</label><br><br>
-          <input type='date' id="addition"  required
+        <div class="md-form mx-5 my-5">
+           <label for="complete">Date added:</label><br><br>
+          <input type='date' id="complete" [(ngModel)]="newQuotes.completeDate" name="completeDate"
+            #completeDate="ngModel" required
             class="form-control" class="form-control white-text">
          <div class="form-group">
          
@@ -87,7 +88,7 @@
            
            
           </div>
-        </div> -->
+        </div>
       </div>
 
       <!--Grid row-->

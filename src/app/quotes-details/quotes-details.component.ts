@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -7,11 +7,16 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes-details.component.scss']
 })
 export class QuotesDetailsComponent implements OnInit {
-  quotes = [
-    new Quotes("Gus", "William Shakespeare", "the future is but the obsolete in reverse", "an inspiring quote on the malleability of time"),
-    new Quotes("Gus", "Charles de Gaulle", "the beauty is in the walking we're betrayed by destinations", "an inspiring quote on the malleability of time"),
-    new Quotes("Gus", "Shirley Britt", "we don't know the fututre but the end is always near", "an inspiring quote on the malleability of time"),
-  ]   
+  // quotes = [
+  //   new Quotes("Gus", "William Shakespeare", "the future is but the obsolete in reverse", "an inspiring quote on the malleability of time"),
+  //   new Quotes("Gus", "Charles de Gaulle", "the beauty is in the walking we're betrayed by destinations", "an inspiring quote on the malleability of time"),
+  //   new Quotes("Gus", "Shirley Britt", "we don't know the fututre but the end is always near", "an inspiring quote on the malleability of time"),
+  // ]   
+
+
+  @Input() quote: Quotes;
+  @Output() isComplete = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {

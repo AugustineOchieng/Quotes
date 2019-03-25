@@ -23,13 +23,25 @@ export class QuotesComponent implements OnInit {
   toogleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
-  thumbsUp(upVote, index) {
-    if (upVote) {
-      this.quotes[index].upVote += 1;
-    }
-  } thumbsDown(downVote, index) {
-    if (downVote) {
-      this.quotes[index].downVote -= 1;
+  // thumbsUp(upVote, index) {
+  //   if (upVote) {
+  //     this.quotes[index].upVote += 1;
+  //   }
+  // } thumbsDown(downVote, index) {
+  //   if (downVote) {
+  //     this.quotes[index].downVote -= 1;
+  //   }
+  // }
+
+  deleteQuotes(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(
+        'Are you sure you want to delete ${this.quotes[index].name}'
+      );
+
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
   }
   constructor() {}

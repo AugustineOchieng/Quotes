@@ -2,11 +2,11 @@
 Added on {{quote.completeDate|date|uppercase}}
 <div class="row">
   <div class="col-md-4">
-    <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button> </div>
+    <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete <br> Quote</button> </div>
   <div class="col-md-4">
-    <button class="btn btn-success" (click)='thumbsUp(true)'>Upvote</button><span>{{quote.upVote}}</span>
+    <button class="btn btn-success" (click)='thumbsUp()'>Upvote<br>{{upvotes}}</button>
   </div>
   <div class="col-md-4">
-    <button class="btn btn-warning" (click)='thumbsDown(true)'>DownVote</button><span>{{quote.downVote}}</span>
+    <button class="btn btn-warning" (click)='thumbsDown()'>DownVote<br>{{downvote}}</button>
   </div>
 </div>

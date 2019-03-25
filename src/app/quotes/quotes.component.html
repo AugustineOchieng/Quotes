@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="" *ngIf="quote.showDetails">
-      <app-quotes-details [quote]='quote'>
+      <app-quotes-details [quote]='quote' (isComplete)='deleteQuotes($event,i)'>
       </app-quotes-details>
     </div>
     <!-- <ul class="p-3 blue-grey lighten-5 blue-grey lighten-5">

@@ -1,3 +1,4 @@
+
 export class Quotes {
   public showDetails: boolean;
   constructor(

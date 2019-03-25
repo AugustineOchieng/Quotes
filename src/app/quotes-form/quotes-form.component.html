@@ -26,7 +26,7 @@
         <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
      </form> -->
 <!--Section: Live preview-->
-<form>
+<form (ngSubmit)='submitQuotes()' #quoteForm='ngForm'>
 <section class="form-dark">
 
   <!--Form without header-->
@@ -43,28 +43,40 @@
       <!--Body-->
       <div class="md-form">
         <label for="name">Your name</label><br><br>
-        <input type="text" id="name" class="form-control white-text"placeholder="name">
+        <input type="text" id="name" class="form-control white-text" [(ngModel)]="newQuotes.name" name="name"
+          #name="ngModel" placeholder="name">
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p>Name is Required</p>
+          </div>
         <!-- add two way data binding syntax -->
-       
+       Display {{newQuotes.name}}
         
       </div>
 
          <div class="md-form">
            <label for="name">Author</label><br><br>
-              <input type="text" id="name" class="form-control white-text" name="name" placeholder="name">
+              <input type="text" id="author" class="form-control white-text" name="author" placeholder="author"
+                [(ngModel)]="newQuotes.author" #author="ngModel">
         
          </div>
 
       <div class="md-form pb-3">
         
-        <label for="quoteadded">Add a Quote</label><br><br>
+        <label for="wise">Add a Quote</label><br><br>
         
       
-                <textarea class="form-control" id="description" rows="4"  class="form-control
-                  white-text"></textarea>
+                <textarea class="form-control" id="wise" rows="4"  class="form-control
+                  white-text" name="wise" placeholder="put quote"
+                  [(ngModel)]="newQuotes.wise" #wise="ngModel"></textarea>
         
+<label for="details">Description</label><br><br>
 
-        <div class="md-form mx-5 my-5">
+
+<textarea class="form-control" id="details" rows="2" class="form-control
+                  white-text" name="details" placeholder="put details" [(ngModel)]="newQuotes.details"
+  #details="ngModel"></textarea>
+
+        <!-- <div class="md-form mx-5 my-5">
            <label for="addition">Date added:</label><br><br>
           <input type='date' id="addition"  required
             class="form-control" class="form-control white-text">
@@ -75,7 +87,7 @@
            
            
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!--Grid row-->
@@ -83,7 +95,7 @@
 
         <!--Grid column-->
         <div class="text-center mb-3 col-md-12">
-          <button type="submit" class="btn btn-success btn-block btn-rounded z-depth-1">Add Quote</button>
+          <button type="Submit" class="btn btn-success btn-block btn-rounded z-depth-1">Add Quote</button>
         </div>
         <!--Grid column-->
       </div>
@@ -97,4 +109,5 @@
 
 </section>
 <!--Section: Live preview-->
+</form>
 

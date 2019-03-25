@@ -1,39 +1,37 @@
  <div class="row">
- <div class="col-md-6">
+ <div class="col-md-4">
   
 <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
  </div>
- <div class="col-md-6">
+ <div class="col-md-8">
 <ul>
   <li *ngFor="let quote of quotes; let i = index">
 
     <div class="media">
       <div class="row">
-        <div class="col-xsm-4">
+        <div class="col-md-4">
           <h3 class="h3-responsive font-weight-bold mr-3">By :{{quote.author}}<br>
             <!-- <ul>
       <li *ngFor='let quote of quotes'>{{quote.author}}</li>
     </ul> -->
 
           </h3>
-        </div>
+        </div><br><br>
         <div class="media-body mb-3">
-          <div class="col-sm-8">
+          <div class="col-md-8">
             <h6 class="mt-0 font-weight-bold">Uploaded by :{{quote.name}}<br>
-              <!-- <ul>
-        <li *ngFor='let q  </li>
-       </ul>uote of quotes'>{{quote.name}}
-        </li>
-      </ul> -->
+             
 
             </h6>
 
             <hr class="hr-bold mb-0 my-2" />
           </div>
-        </div>
+        </div><br><br>
+        <div class="col-md-8">
         <p class="p-3 blue-grey lighten-5 blue-grey lighten-5"><br><br>
           {{quote.wise}}
         </p><br><br>
+        </div>
         <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
         <!-- <ul class="p-3 blue-grey lighten-5 blue-grey lighten-5" class="mb-0">
      

@@ -16,6 +16,16 @@ export class QuotesDetailsComponent implements OnInit {
 
   @Input() quote: Quotes;
   @Output() isComplete = new EventEmitter<boolean>();
+  @Output() upVote = new EventEmitter<boolean>();
+  @Output() downVote = new EventEmitter<boolean>();
+
+
+  thumbsUp(voting: boolean) {
+    this.upVote.emit(voting);
+  }
+  thumbsDown(voting1: boolean) {
+    this.downVote.emit(voting1);
+  }
 
   constructor() { }
 

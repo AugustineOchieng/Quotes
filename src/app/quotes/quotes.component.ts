@@ -9,9 +9,10 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes = [
-    new Quotes("Gus", "William Shakespeare", "the future is but the obsolete in reverse", "an inspiring quote on the malleability of time"),
-    new Quotes("Gus", "Charles de Gaulle", "the beauty is in the walking we're betrayed by destinations", "an inspiring quote on the malleability of time"),
-    new Quotes("Gus", "Shirley Britt", "we don't know the fututre but the end is always near", "an inspiring quote on the malleability of time"),
+    new Quotes("Gus", "William Shakespeare", "the future is but the obsolete in reverse", "an inspiring quote on the malleability of time", new Date(2018, 3, 14),0,0),
+    new Quotes("Gus", "William Shakespeare", "the future is but the obsolete in reverse", "an inspiring quote on the malleability of time", new Date(2018, 3, 14),0,0),
+    new Quotes("Gus", "Charles de Gaulle", "the beauty is in the walking we're betrayed by destinations", "an inspiring quote on the malleability of time", new Date(2018, 3, 14),0,0),
+    new Quotes("Gus", "Shirley Britt", "we don't know the fututre but the end is always near", "an inspiring quote on the malleability of time", new Date(2018, 3, 14),0,0),
   ];
   addNewQuotes(quote) {
     let quoteLength = this.quotes.length;
@@ -21,6 +22,15 @@ export class QuotesComponent implements OnInit {
   }
   toogleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+  thumbsUp(upVote, index) {
+    if (upVote) {
+      this.quotes[index].upVote += 1;
+    }
+  } thumbsDown(downVote, index) {
+    if (downVote) {
+      this.quotes[index].downVote -= 1;
+    }
   }
   constructor() {}
 
